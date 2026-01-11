@@ -1,37 +1,21 @@
-# ===============================
-# Assistant Intelligent Tunisien
-# Streamlit Cloud - STABLE
-# Python 3.10
-# ===============================
-
-# Core
 numpy==1.26.4
 pandas==2.1.4
 
-# ML / NLP
 scikit-learn==1.3.2
 sentence-transformers==2.2.2
 transformers==4.35.2
 huggingface-hub==0.16.4
 
-# Torch (CPU)
 torch==2.1.2
 torchvision==0.16.2
 torchaudio==2.1.2
 
-# Language
 langdetect==1.0.9
 python-Levenshtein==0.23.0
-
-# Data
 datasets==2.15.0
 
-# Visualization
 plotly==5.18.0
-
-# Web
 streamlit==1.29.0
 
-# Utils
 tqdm==4.66.1
 requests==2.31.0
