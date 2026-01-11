@@ -1,0 +1,28 @@
+{
+  "model_name": "sentence-transformers/paraphrase-multilingual-mpnet-base-v2",
+  "embedding_dim": 768,
+  "num_examples": 100,
+  "categories": [
+    "sante",
+    "administration",
+    "economie",
+    "transport",
+    "immobilier",
+    "education",
+    "automobile",
+    "emploi",
+    "tourisme",
+    "shopping",
+    "culture",
+    "telecommunication",
+    "urgence",
+    "meteo",
+    "sport"
+  ],
+  "languages": [
+    "fr",
+    "tn",
+    "en"
+  ],
+  "accuracy": 0.7
+}
