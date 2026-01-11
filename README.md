@@ -3,7 +3,7 @@
 Application Streamlit multilingue (FR / EN / AR / TN) propulsée par Sentence Transformers pour répondre aux questions fréquentes sur la Tunisie. Le code charge un jeu de données pré-embeddé et effectue une recherche par similarité cosinus.
 
 ## Structure rapide
-- `app/streamlit_app.py` : application Streamlit (UI, logique de chat, chargement des ressources).
+- `app/app.py` : application Streamlit (UI, logique de chat, chargement des ressources).
 - `data/` : jeu de données CSV (`tunisian_assistant_data_clean.csv` ou `tunisian_assistant_data.csv`).
 - `models/` : embeddings numpy (`question_embeddings_final.npy` ou `question_embeddings.npy`).
 - `notebooks/` : exploration/embeddings (sources de données/embeddings si besoin).
@@ -26,9 +26,9 @@ pip install -r requirements.txt
   - `question_embeddings_final.npy` (prioritaire) ou `question_embeddings.npy`.
 - Si tu ne peux pas créer `models/`, l’app essaie aussi `notebooks/question_embeddings_final.npy` ou `notebooks/question_embeddings.npy`.
 
-## Lancer l’application
+## Lancer l'application
 ```bash
-streamlit run app/streamlit_app.py
+streamlit run app/app.py
 ```
 Ensuite ouvre http://localhost:8501.
 
@@ -44,7 +44,7 @@ Ensuite ouvre http://localhost:8501.
   - Pourquoi : éviter de recalculer les embeddings à chaque démarrage et garantir la cohérence avec le CSV (mêmes lignes/ordre).
 
 ## Variables importantes
-- Chemins : dérivés de `app/streamlit_app.py` (`DATA_DIR = project_root/data`, `MODELS_DIR = project_root/models`).
+- Chemins : dérivés de `app/app.py` (`DATA_DIR = project_root/data`, `MODELS_DIR = project_root/models`).
 - Modèle : `sentence-transformers/paraphrase-multilingual-mpnet-base-v2`.
 - Seuil de confiance ajustable dans la sidebar.
 
@@ -63,7 +63,7 @@ Ensuite ouvre http://localhost:8501.
 - Depuis le shell Python (env activé) :
   ```bash
   python - <<'PY'
-  from app.streamlit_app import TunisianAssistantChatbot
+  from app.app import TunisianAssistantChatbot
   cb = TunisianAssistantChatbot()
   res = cb.chat("kifech na7i passport?", threshold=0.4)
   print(res["detected_language"], res["category"], res["confidence"])
@@ -75,3 +75,9 @@ Ensuite ouvre http://localhost:8501.
 - Ne pas déplacer les caches Streamlit hors du projet (sinon rechargements plus lents).
 - Garder les embeddings pré-calculés alignés avec le CSV (même ordre de lignes).
 - Utiliser un environnement propre pour éviter les conflits torch/huggingface.
+
+
+rebuild...
+
+
+
