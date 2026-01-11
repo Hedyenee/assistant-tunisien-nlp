@@ -1,6 +1,6 @@
 # ===============================
 # Assistant Intelligent Tunisien
-# Compatible Streamlit Cloud
+# Streamlit Cloud - STABLE
 # Python 3.10
 # ===============================
 
@@ -14,7 +14,7 @@ sentence-transformers==2.2.2
 transformers==4.35.2
 huggingface-hub==0.16.4
 
-# Torch (CPU only – compatible)
+# Torch (CPU)
 torch==2.1.2
 torchvision==0.16.2
 torchaudio==2.1.2
