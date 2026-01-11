@@ -1,4 +1,9 @@
 streamlit==1.29.0
+# Pin rich/markdown-it to avoid incompatible 14.x/4.x that break Streamlit
+rich==13.7.0
+markdown-it-py==2.2.0
+mdurl==0.1.2
+pygments==2.15.0
 
 numpy==1.26.4
 pandas==2.1.4
